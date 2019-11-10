@@ -4,13 +4,8 @@ pipeline {
         stage("Code Checkout") {
             steps {
                 git branch: "master",
-                url: "https://gitlab.com/Jonathan.F/api-validation.git",
+                url: "https://github.com/MatheusAdejair/tst_api_avaliacao_agibank/",
                 credentialsId: 'matheus_adejair'
-            }
-        }
-        stage("Build Docker Image") {
-            steps {
-                sh("docker build -t apivalidation .")
             }
         }
         stage("Start Mongo") {
