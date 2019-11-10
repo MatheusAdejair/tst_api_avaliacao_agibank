@@ -18,10 +18,5 @@ pipeline {
                 sh("docker run -d --name mongodb --network host mongo")
             }
         }
-        stage("Run API Testing") {
-            steps {
-                sh("docker run --network host apivalidation gradle cleanTest test")
-            }
-        }
     }
 }
