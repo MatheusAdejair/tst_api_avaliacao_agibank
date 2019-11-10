@@ -8,10 +8,5 @@ pipeline {
                 credentialsId: 'matheus_adejair'
             }
         }
-        stage("Start Mongo") {
-            steps {
-                sh("docker run -d --name mongodb --network host mongo")
-            }
-        }
     }
 }
